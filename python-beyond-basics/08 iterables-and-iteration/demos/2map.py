@@ -1,0 +1,1 @@
+print(list(map(ord, 'The quick brown fox')))
