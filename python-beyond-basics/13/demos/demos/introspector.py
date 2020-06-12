@@ -6,7 +6,7 @@ from sorted_set import SortedSet
 
 def full_sig(method):
     try:
-        return method.__name__ + inspect.signature(method)
+        return method.__name__ + str(inspect.signature(method))
     except ValueError:
         return method.__name__ + '(...)'
 
@@ -69,3 +69,8 @@ def dump(obj):
                             for method in methods]
     print_table(method_names_and_doc, "Name", "Description")
     print()
+
+if __name__ == '__main__':
+    # ss = SortedSet([1,2,3,2])
+    # dump(ss)
+    dump(7)
